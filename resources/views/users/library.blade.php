@@ -28,7 +28,7 @@
                                         </p>
                                     </div>
                                     <div class="card-footer">
-                                        <a href="#" class="btn btn-success btn-block">Read Book</a>
+                                        <a href="{{ route('bookread', $book->slug) }}" class="btn btn-success btn-block">Read Book</a>
                                     </div>
                                 </div>
                             </div>
