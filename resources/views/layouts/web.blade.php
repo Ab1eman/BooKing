@@ -6,6 +6,9 @@
 
     <title>{{ config('app.name', 'Laravel') }} | Your favorite book store</title>
 
+    <!-- Scripts -->
+    <script src="{{ config('app.url') . '/js/app.js' }}" defer></script>
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
@@ -17,9 +20,9 @@
     <div class="flex-center position-ref full-height">
         @if (Route::has('login'))
             <div class="top-right links">
-{{--                <a href="{{ route('home') }}">Home</a>--}}
-{{--                <a href="{{ route('about') }}">About</a>--}}
-{{--                <a href="{{ route('contact') }}">Contact</a>--}}
+                <a href="{{ route('home') }}">Home</a>
+                <a href="{{ route('about') }}">About</a>
+                <a href="{{ route('contact') }}">Contact</a>
                 @auth
                     <a href="{{ url('/library') }}">
                         Profile

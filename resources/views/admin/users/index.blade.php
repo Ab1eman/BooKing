@@ -11,7 +11,7 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <h5>Users</h5>
-                        <a href="{{ route('admin.users.create') }}" class="btn btn-primary btn-sm">New User</a>
+                        <a href="{{ route('admin.users.create') }}" class="btn btn-primary btn-sm">Add New User</a>
                     </div>
 
                     <div class="card-body">
@@ -38,11 +38,11 @@
                                         </td>
                                         <td class="text-center">
                                             <div class="btn-group">
-                                                <a href="{{ route('admin.users.edit', $user->id) }}" class="btn btn-warning btn-sm">E</a>
+                                                <a href="{{ route('admin.users.edit', $user->id) }}" class="btn btn-warning btn-sm">Edit user</a>
                                                 <form action="{{ route('admin.users.destroy', $user->id) }}" method="post">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm">D</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm">Delete user</button>
                                                 </form>
                                             </div>
                                         </td>

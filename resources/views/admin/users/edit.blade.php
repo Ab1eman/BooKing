@@ -36,7 +36,8 @@
                                     </span>
                                 @enderror
                             </div>
-                            <div class="form-group">
+
+                            <!-- <div class="form-group">
                                 <label for="password"><strong>Password:</strong></label>
                                 <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" id="password" />
                                 @error('password')
@@ -44,7 +45,8 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            </div>
+                            </div> -->
+                            
                             <div class="form-group">
                                 <label><strong>Roles:</strong></label>
                                 <br />

@@ -11,7 +11,7 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <h5>Authors</h5>
-                        <a href="{{ route('admin.authors.create') }}" class="btn btn-primary btn-sm">New Author</a>
+                        <a href="{{ route('admin.authors.create') }}" class="btn btn-primary btn-sm">Add new Author</a>
                     </div>
 
                     <div class="card-body">
@@ -30,11 +30,11 @@
                                         <td>{{ $author->name }}</td>
                                         <td class="text-center">
                                             <div class="btn-group">
-                                                <a href="{{ route('admin.authors.edit', $author->id) }}" class="btn btn-warning btn-sm">E</a>
+                                                <a href="{{ route('admin.authors.edit', $author->id) }}" class="btn btn-warning btn-sm">Edit author</a>
                                                 <form action="{{ route('admin.authors.destroy', $author->id) }}" method="post">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm">D</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm">Delete author</button>
                                                 </form>
                                             </div>
                                         </td>

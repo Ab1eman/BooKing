@@ -11,7 +11,7 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <h5>Roles</h5>
-                        <a href="{{ route('admin.roles.create') }}" class="btn btn-primary btn-sm">New Rol</a>
+                        <a href="{{ route('admin.roles.create') }}" class="btn btn-primary btn-sm">Add new Role</a>
                     </div>
 
                     <div class="card-body">
@@ -30,11 +30,11 @@
                                         <td>{{ $role->name }}</td>
                                         <td class="text-center">
                                             <div class="btn-group">
-                                                <a href="{{ route('admin.roles.edit', $role->id) }}" class="btn btn-warning btn-sm">E</a>
+                                                <a href="{{ route('admin.roles.edit', $role->id) }}" class="btn btn-warning btn-sm">Edit role</a>
                                                 <form action="{{ route('admin.roles.destroy', $role->id) }}" method="post">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm">D</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm">Delete role</button>
                                                 </form>
                                             </div>
                                         </td>

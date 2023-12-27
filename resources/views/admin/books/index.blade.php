@@ -11,7 +11,7 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <h5>Books</h5>
-                        <a href="{{ route('admin.books.create') }}" class="btn btn-primary btn-sm">New Book</a>
+                        <a href="{{ route('admin.books.create') }}" class="btn btn-primary btn-sm">Add new Book</a>
                     </div>
 
                     <div class="card-body">
@@ -45,12 +45,12 @@
                                         </td>
                                         <td class="text-center">
                                             <div class="btn-group">
-                                                <a href="{{ route('admin.books.show', $book->id) }}" class="btn btn-info btn-sm">S</a>
-                                                <a href="{{ route('admin.books.edit', $book->id) }}" class="btn btn-warning btn-sm">E</a>
+                                                <a href="{{ route('admin.books.show', $book->id) }}" class="btn btn-info btn-sm">Details</a>
+                                                <a href="{{ route('admin.books.edit', $book->id) }}" class="btn btn-warning btn-sm">Edit book</a>
                                                 <form action="{{ route('admin.books.destroy', $book->id) }}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm">D</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm">Delete book</button>
                                                 </form>
                                             </div>
                                         </td>
