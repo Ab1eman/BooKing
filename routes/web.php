@@ -29,6 +29,13 @@ Route::get('/book/{slug}', function($slug) {
     return view('book', compact('book'));
 })->name('book');
 
+Route::get('/bookread/{slug}', function($slug) {
+    $book = \App\Entities\Book::where('slug', $slug)->first();
+
+    return view('bookread', compact('book'));
+})->name('bookread');
+
+
 Route::view('about', 'about')->name('about');
 Route::view('contact', 'contact')->name('contact');
 
